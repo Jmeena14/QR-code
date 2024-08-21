@@ -6,5 +6,5 @@ s3="&cu=INR"
 s=s1+s2+s3
 if st.button("Generate"):
    url=pyqrcode.create(s)
-   url.png('myqr.png',Scale=10)
+   url.png('myqr.png',scale=10)
    st.image("myqr.png",caption="Generated QR")
