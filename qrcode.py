@@ -1,0 +1,10 @@
+import pyqrcode
+import streamlit as st
+s1="upi://pay?pa=jmeena14@oksbi&am="
+s2=st.text_input("Enter the amount,""please enter")
+s3="&cu=INR"
+s=s1+s2+s3
+if st.button("Generate"):
+   url=pyqrcode.create(s)
+   url.png('myqr.png',Scale=10)
+   st.image("myqr.png",caption="Generated QR")
